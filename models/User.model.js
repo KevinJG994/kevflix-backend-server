@@ -18,6 +18,19 @@ const userSchema = new Schema(
       type: String,
       required: [true, "Name is required."],
     },
+    image: {
+      type: String,
+      default: "https://i.imgur.com/r8bo8u7.png"
+    },
+    date: {
+      type: String,
+      default: "https://i.imgur.com/r8bo8u7.png"
+    },
+    createdAt: { 
+      type: Date, 
+      default: Date.now,
+      inmutable: true 
+  },
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
