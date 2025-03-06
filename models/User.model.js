@@ -1,6 +1,5 @@
 const { Schema, model } = require("mongoose");
 
-// TODO: Please make sure you edit the User model to whatever makes sense in this case
 const userSchema = new Schema(
   {
     email: {
@@ -20,21 +19,21 @@ const userSchema = new Schema(
     },
     image: {
       type: String,
-      default: "https://i.imgur.com/r8bo8u7.png"
+      default: "./assets/images/profile-img.jpg",
     },
-    date: {
+    image: {
       type: String,
-      default: "https://i.imgur.com/r8bo8u7.png"
+      default: "./assets/images/profile-img.jpg",
     },
-    createdAt: { 
-      type: Date, 
+    createdAt: {
+      type: Date,
       default: Date.now,
-      inmutable: true 
-  },
+      immutable: true,
+    },
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
-    timestamps: true,
+    timestamps: { createdAt: false, updatedAt: true },
   }
 );
 
