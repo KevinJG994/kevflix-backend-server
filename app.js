@@ -31,6 +31,9 @@ app.use("/api", indexRoutes);
 const movieRoutes = require("./routes/movies.routes");
 app.use("/api/movies", movieRoutes);
 
+const serieRoutes = require("./routes/series.routes");
+app.use("/api/series", serieRoutes);
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
