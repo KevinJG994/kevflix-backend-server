@@ -1,0 +1,464 @@
+[
+    {
+        "title": "The Batman",
+        "director": "Matt Reeves",
+        "synopsis": "Bruce Wayne, un joven y oscuro Batman, investiga una serie de asesinatos que están aterrorizando a Gotham City, mientras lidia con su propia venganza personal. A lo largo de la película, descubre una conspiración que vincula a su familia con los crimenes que están ocurriendo en la ciudad.",
+        "image": "path/to/the_batman.jpg",
+        "video": "path/to/the_batman.mp4",
+        "gender": [
+            "Accion",
+            "Drama"
+        ],
+        "rating": 4.5,
+        "duration": 155,
+        "year": 2022
+    },
+    {
+        "title": "Spider-Man: No Way Home",
+        "director": "Jon Watts",
+        "synopsis": "Peter Parker, ahora identificado como Spider-Man, busca ayuda de Doctor Strange para borrar el conocimiento público de su identidad secreta. Sin embargo, su hechizo sale mal y abre portales a universos paralelos, trayendo versiones alternativas de villanos y héroes de otros mundos.",
+        "image": "path/to/spiderman_no_way_home.jpg",
+        "video": "path/to/spiderman_no_way_home.mp4",
+        "gender": [
+            "Accion",
+            "Ciencia ficcion"
+        ],
+        "rating": 4.7,
+        "duration": 148,
+        "year": 2021
+    },
+    {
+        "title": "Dune",
+        "director": "Denis Villeneuve",
+        "synopsis": "En un futuro lejano, el joven Paul Atreides se ve obligado a trasladarse a un planeta desértico llamado Arrakis, la fuente de la especia más valiosa del universo. Mientras su familia se enfrenta a traiciones y guerra, Paul descubre que tiene un destino trascendental que cambiará el futuro del universo.",
+        "image": "path/to/dune.jpg",
+        "video": "path/to/dune.mp4",
+        "gender": [
+            "Ciencia ficcion",
+            "Aventura"
+        ],
+        "rating": 4.6,
+        "duration": 155,
+        "year": 2021
+    },
+    {
+        "title": "Joker",
+        "director": "Todd Phillips",
+        "synopsis": "Arthur Fleck, un hombre que lucha por encontrar su lugar en la sociedad de Gotham, se ve arrastrado a la locura debido a la indiferencia de las instituciones que lo rodean. Transformado en el villano Joker, busca venganza mientras se enfrenta a su propia identidad.",
+        "image": "path/to/joker.jpg",
+        "video": "path/to/joker.mp4",
+        "gender": [
+            "Drama",
+            "Terror"
+        ],
+        "rating": 4.8,
+        "duration": 122,
+        "year": 2019
+    },
+    {
+        "title": "Avengers: Endgame",
+        "director": "Anthony Russo, Joe Russo",
+        "synopsis": "Después de la devastadora derrota a manos de Thanos, los Avengers restantes deben encontrar una forma de deshacer los daños causados por el chasquido de dedos y devolver el equilibrio al universo. Esta última batalla será su enfrentamiento final contra el titán loco.",
+        "image": "path/to/avengers_endgame.jpg",
+        "video": "path/to/avengers_endgame.mp4",
+        "gender": [
+            "Accion",
+            "Aventura"
+        ],
+        "rating": 4.9,
+        "duration": 181,
+        "year": 2019
+    },
+    {
+        "title": "Shang-Chi and the Legend of the Ten Rings",
+        "director": "Destin Daniel Cretton",
+        "synopsis": "Shang-Chi, un experto en artes marciales, se ve obligado a enfrentar su pasado cuando es atraído al misterioso y peligroso mundo de los Diez Anillos, una organización secreta que lo persigue. Mientras se enfrenta a su destino, descubre secretos oscuros sobre su familia.",
+        "image": "path/to/shang_chi.jpg",
+        "video": "path/to/shang_chi.mp4",
+        "gender": [
+            "Accion",
+            "Aventura"
+        ],
+        "rating": 4.6,
+        "duration": 132,
+        "year": 2021
+    },
+    {
+        "title": "No Time to Die",
+        "director": "Cary Joji Fukunaga",
+        "synopsis": "James Bond, ahora retirado, regresa a la acción cuando un antiguo amigo lo llama para rescatar a un científico secuestrado. En su misión, Bond se enfrenta a un nuevo villano con tecnología peligrosa y secretos del pasado que amenazan al mundo entero.",
+        "image": "path/to/no_time_to_die.jpg",
+        "video": "path/to/no_time_to_die.mp4",
+        "gender": [
+            "Accion",
+            "Espionaje"
+        ],
+        "rating": 4.3,
+        "duration": 163,
+        "year": 2021
+    },
+    {
+        "title": "Soul",
+        "director": "Pete Docter",
+        "synopsis": "Joe Gardner, un maestro de música que sueña con convertirse en un músico de jazz profesional, tiene un accidente y termina en el más allá. Mientras busca regresar a la Tierra, aprende lecciones sobre la vida y el propósito a través de su relación con 22, una alma que aún no tiene deseos de vivir.",
+        "image": "path/to/soul.jpg",
+        "video": "path/to/soul.mp4",
+        "gender": [
+            "Animacion",
+            "Aventura"
+        ],
+        "rating": 4.8,
+        "duration": 100,
+        "year": 2020
+    },
+    {
+        "title": "The Suicide Squad",
+        "director": "James Gunn",
+        "synopsis": "Un grupo de villanos reformados, conocidos como la 'Suicide Squad', es reclutado por el gobierno para una misión suicida en la isla de Corto Maltese, un lugar controlado por criminales. En su viaje, se enfrentan a criaturas aterradoras y situaciones extremas.",
+        "image": "path/to/the_suicide_squad.jpg",
+        "video": "path/to/the_suicide_squad.mp4",
+        "gender": [
+            "Accion",
+            "Comedia"
+        ],
+        "rating": 4.2,
+        "duration": 132,
+        "year": 2021
+    },
+    {
+        "title": "A Quiet Place Part II",
+        "director": "John Krasinski",
+        "synopsis": "Después de los eventos de la primera película, los Abbott deben continuar sobreviviendo en un mundo devastado donde criaturas mortales cazan por el sonido. En su lucha por encontrar un lugar seguro, descubren nuevos peligros que amenazan su existencia.",
+        "image": "path/to/a_quiet_place_2.jpg",
+        "video": "path/to/a_quiet_place_2.mp4",
+        "gender": [
+            "Terror",
+            "Suspenso"
+        ],
+        "rating": 4.3,
+        "duration": 97,
+        "year": 2020
+    },
+    {
+        "title": "The Green Knight",
+        "director": "David Lowery",
+        "synopsis": "Basada en el poema medieval, esta película sigue al caballero Gawain mientras emprende una peligrosa misión para enfrentar al misterioso y sobrenatural Caballero Verde. A lo largo de su viaje, se enfrenta a tentaciones y pruebas que ponen a prueba su honor y valentía.",
+        "image": "path/to/the_green_knight.jpg",
+        "video": "path/to/the_green_knight.mp4",
+        "gender": [
+            "Aventura",
+            "Fantasia"
+        ],
+        "rating": 4.0,
+        "duration": 130,
+        "year": 2021
+    },
+    {
+        "title": "Free Guy",
+        "director": "Shawn Levy",
+        "synopsis": "Guy es un NPC (personaje no jugable) dentro de un videojuego en línea de mundo abierto. Un día, se da cuenta de que su vida es parte de un videojuego y decide tomar el control de su destino. Junto a un jugador humano, se enfrenta a villanos y desafíos dentro del juego.",
+        "image": "path/to/free_guy.jpg",
+        "video": "path/to/free_guy.mp4",
+        "gender": [
+            "Accion",
+            "Comedia"
+        ],
+        "rating": 4.2,
+        "duration": 115,
+        "year": 2021
+    },
+    {
+        "title": "Eternals",
+        "director": "Chloé Zhao",
+        "synopsis": "Un grupo de poderosos seres inmortales, los Eternos, han estado viviendo en secreto en la Tierra durante milenios, protegiendo a la humanidad de criaturas malignas. Después de los eventos de 'Avengers: Endgame', deben reunirse para enfrentar una nueva amenaza que pondrá en peligro a toda la humanidad.",
+        "image": "path/to/eternals.jpg",
+        "video": "path/to/eternals.mp4",
+        "gender": [
+            "Ciencia ficcion",
+            "Accion"
+        ],
+        "rating": 3.9,
+        "duration": 157,
+        "year": 2021
+    },
+    {
+        "title": "Pelicula 11",
+        "director": "Director 11",
+        "synopsis": "Esta es una sinopsis detallada para la película número 11, que explora una historia emocionante con personajes memorables y un desarrollo atrapante.",
+        "image": "path/to/movie_11.jpg",
+        "video": "path/to/movie_11.mp4",
+        "gender": [
+            "Accion",
+            "Drama"
+        ],
+        "rating": 4.5,
+        "duration": 100,
+        "year": 2001
+    },
+    {
+        "title": "Pelicula 12",
+        "director": "Director 12",
+        "synopsis": "Esta es una sinopsis detallada para la película número 12, que explora una historia emocionante con personajes memorables y un desarrollo atrapante.",
+        "image": "path/to/movie_12.jpg",
+        "video": "path/to/movie_12.mp4",
+        "gender": [
+            "Accion",
+            "Drama"
+        ],
+        "rating": 3.5,
+        "duration": 110,
+        "year": 2002
+    },
+    {
+        "title": "Pelicula 13",
+        "director": "Director 13",
+        "synopsis": "Esta es una sinopsis detallada para la película número 13, que explora una historia emocionante con personajes memorables y un desarrollo atrapante.",
+        "image": "path/to/movie_13.jpg",
+        "video": "path/to/movie_13.mp4",
+        "gender": [
+            "Accion",
+            "Drama"
+        ],
+        "rating": 4.0,
+        "duration": 120,
+        "year": 2003
+    },
+    {
+        "title": "Pelicula 14",
+        "director": "Director 14",
+        "synopsis": "Esta es una sinopsis detallada para la película número 14, que explora una historia emocionante con personajes memorables y un desarrollo atrapante.",
+        "image": "path/to/movie_14.jpg",
+        "video": "path/to/movie_14.mp4",
+        "gender": [
+            "Accion",
+            "Drama"
+        ],
+        "rating": 4.5,
+        "duration": 130,
+        "year": 2004
+    },
+    {
+        "title": "Pelicula 15",
+        "director": "Director 15",
+        "synopsis": "Esta es una sinopsis detallada para la película número 15, que explora una historia emocionante con personajes memorables y un desarrollo atrapante.",
+        "image": "path/to/movie_15.jpg",
+        "video": "path/to/movie_15.mp4",
+        "gender": [
+            "Accion",
+            "Drama"
+        ],
+        "rating": 3.5,
+        "duration": 90,
+        "year": 2005
+    },
+    {
+        "title": "Pelicula 16",
+        "director": "Director 16",
+        "synopsis": "Esta es una sinopsis detallada para la película número 16, que explora una historia emocionante con personajes memorables y un desarrollo atrapante.",
+        "image": "path/to/movie_16.jpg",
+        "video": "path/to/movie_16.mp4",
+        "gender": [
+            "Accion",
+            "Drama"
+        ],
+        "rating": 4.0,
+        "duration": 100,
+        "year": 2006
+    },
+    {
+        "title": "Pelicula 17",
+        "director": "Director 17",
+        "synopsis": "Esta es una sinopsis detallada para la película número 17, que explora una historia emocionante con personajes memorables y un desarrollo atrapante.",
+        "image": "path/to/movie_17.jpg",
+        "video": "path/to/movie_17.mp4",
+        "gender": [
+            "Accion",
+            "Drama"
+        ],
+        "rating": 4.5,
+        "duration": 110,
+        "year": 2007
+    },
+    {
+        "title": "Pelicula 18",
+        "director": "Director 18",
+        "synopsis": "Esta es una sinopsis detallada para la película número 18, que explora una historia emocionante con personajes memorables y un desarrollo atrapante.",
+        "image": "path/to/movie_18.jpg",
+        "video": "path/to/movie_18.mp4",
+        "gender": [
+            "Accion",
+            "Drama"
+        ],
+        "rating": 3.5,
+        "duration": 120,
+        "year": 2008
+    },
+    {
+        "title": "Pelicula 19",
+        "director": "Director 19",
+        "synopsis": "Esta es una sinopsis detallada para la película número 19, que explora una historia emocionante con personajes memorables y un desarrollo atrapante.",
+        "image": "path/to/movie_19.jpg",
+        "video": "path/to/movie_19.mp4",
+        "gender": [
+            "Accion",
+            "Drama"
+        ],
+        "rating": 4.0,
+        "duration": 130,
+        "year": 2009
+    },
+    {
+        "title": "Pelicula 20",
+        "director": "Director 20",
+        "synopsis": "Esta es una sinopsis detallada para la película número 20, que explora una historia emocionante con personajes memorables y un desarrollo atrapante.",
+        "image": "path/to/movie_20.jpg",
+        "video": "path/to/movie_20.mp4",
+        "gender": [
+            "Accion",
+            "Drama"
+        ],
+        "rating": 4.5,
+        "duration": 90,
+        "year": 2010
+    },
+    {
+        "title": "Pelicula 21",
+        "director": "Director 21",
+        "synopsis": "Esta es una sinopsis detallada para la película número 21, que explora una historia emocionante con personajes memorables y un desarrollo atrapante.",
+        "image": "path/to/movie_21.jpg",
+        "video": "path/to/movie_21.mp4",
+        "gender": [
+            "Accion",
+            "Drama"
+        ],
+        "rating": 3.5,
+        "duration": 100,
+        "year": 2011
+    },
+    {
+        "title": "Pelicula 22",
+        "director": "Director 22",
+        "synopsis": "Esta es una sinopsis detallada para la película número 22, que explora una historia emocionante con personajes memorables y un desarrollo atrapante.",
+        "image": "path/to/movie_22.jpg",
+        "video": "path/to/movie_22.mp4",
+        "gender": [
+            "Accion",
+            "Drama"
+        ],
+        "rating": 4.0,
+        "duration": 110,
+        "year": 2012
+    },
+    {
+        "title": "Pelicula 23",
+        "director": "Director 23",
+        "synopsis": "Esta es una sinopsis detallada para la película número 23, que explora una historia emocionante con personajes memorables y un desarrollo atrapante.",
+        "image": "path/to/movie_23.jpg",
+        "video": "path/to/movie_23.mp4",
+        "gender": [
+            "Accion",
+            "Drama"
+        ],
+        "rating": 4.5,
+        "duration": 120,
+        "year": 2013
+    },
+    {
+        "title": "Pelicula 24",
+        "director": "Director 24",
+        "synopsis": "Esta es una sinopsis detallada para la película número 24, que explora una historia emocionante con personajes memorables y un desarrollo atrapante.",
+        "image": "path/to/movie_24.jpg",
+        "video": "path/to/movie_24.mp4",
+        "gender": [
+            "Accion",
+            "Drama"
+        ],
+        "rating": 3.5,
+        "duration": 130,
+        "year": 2014
+    },
+    {
+        "title": "Pelicula 25",
+        "director": "Director 25",
+        "synopsis": "Esta es una sinopsis detallada para la película número 25, que explora una historia emocionante con personajes memorables y un desarrollo atrapante.",
+        "image": "path/to/movie_25.jpg",
+        "video": "path/to/movie_25.mp4",
+        "gender": [
+            "Accion",
+            "Drama"
+        ],
+        "rating": 4.0,
+        "duration": 90,
+        "year": 2015
+    },
+    {
+        "title": "Pelicula 26",
+        "director": "Director 26",
+        "synopsis": "Esta es una sinopsis detallada para la película número 26, que explora una historia emocionante con personajes memorables y un desarrollo atrapante.",
+        "image": "path/to/movie_26.jpg",
+        "video": "path/to/movie_26.mp4",
+        "gender": [
+            "Accion",
+            "Drama"
+        ],
+        "rating": 4.5,
+        "duration": 100,
+        "year": 2016
+    },
+    {
+        "title": "Pelicula 27",
+        "director": "Director 27",
+        "synopsis": "Esta es una sinopsis detallada para la película número 27, que explora una historia emocionante con personajes memorables y un desarrollo atrapante.",
+        "image": "path/to/movie_27.jpg",
+        "video": "path/to/movie_27.mp4",
+        "gender": [
+            "Accion",
+            "Drama"
+        ],
+        "rating": 3.5,
+        "duration": 110,
+        "year": 2017
+    },
+    {
+        "title": "Pelicula 28",
+        "director": "Director 28",
+        "synopsis": "Esta es una sinopsis detallada para la película número 28, que explora una historia emocionante con personajes memorables y un desarrollo atrapante.",
+        "image": "path/to/movie_28.jpg",
+        "video": "path/to/movie_28.mp4",
+        "gender": [
+            "Accion",
+            "Drama"
+        ],
+        "rating": 4.0,
+        "duration": 120,
+        "year": 2018
+    },
+    {
+        "title": "Pelicula 29",
+        "director": "Director 29",
+        "synopsis": "Esta es una sinopsis detallada para la película número 29, que explora una historia emocionante con personajes memorables y un desarrollo atrapante.",
+        "image": "path/to/movie_29.jpg",
+        "video": "path/to/movie_29.mp4",
+        "gender": [
+            "Accion",
+            "Drama"
+        ],
+        "rating": 4.5,
+        "duration": 130,
+        "year": 2019
+    },
+    {
+        "title": "Pelicula 30",
+        "director": "Director 30",
+        "synopsis": "Esta es una sinopsis detallada para la película número 30, que explora una historia emocionante con personajes memorables y un desarrollo atrapante.",
+        "image": "path/to/movie_30.jpg",
+        "video": "path/to/movie_30.mp4",
+        "gender": [
+            "Accion",
+            "Drama"
+        ],
+        "rating": 3.5,
+        "duration": 90,
+        "year": 1990
+    }
+]

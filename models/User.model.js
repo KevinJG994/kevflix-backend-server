@@ -21,15 +21,12 @@ const userSchema = new Schema(
       type: String,
       default: "./assets/images/profile-img.jpg",
     },
-    image: {
-      type: String,
-      default: "./assets/images/profile-img.jpg",
-    },
     createdAt: {
       type: Date,
       default: Date.now,
       immutable: true,
     },
+
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`

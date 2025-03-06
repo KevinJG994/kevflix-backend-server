@@ -20,6 +20,7 @@ const saltRounds = 10;
 router.post("/signup", (req, res, next) => {
   const { email, password, name } = req.body;
 
+
   // Check if email or password or name are provided as empty strings
   if (email === "" || password === "" || name === "") {
     res.status(400).json({ message: "Provide email, password and name" });
