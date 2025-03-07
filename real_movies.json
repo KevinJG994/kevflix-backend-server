@@ -9,7 +9,7 @@
             "Accion",
             "Drama"
         ],
-        "rating": 4.5,
+        "rating": 3.5,
         "duration": 155,
         "year": 2022
     },
@@ -23,7 +23,7 @@
             "Accion",
             "Ciencia ficcion"
         ],
-        "rating": 4.7,
+        "rating": 4.5,
         "duration": 148,
         "year": 2021
     },
@@ -37,7 +37,7 @@
             "Ciencia ficcion",
             "Aventura"
         ],
-        "rating": 4.6,
+        "rating": 4.5,
         "duration": 155,
         "year": 2021
     },
@@ -51,7 +51,7 @@
             "Drama",
             "Terror"
         ],
-        "rating": 4.8,
+        "rating": 4.0,
         "duration": 122,
         "year": 2019
     },
@@ -65,7 +65,7 @@
             "Accion",
             "Aventura"
         ],
-        "rating": 4.9,
+        "rating": 5.0,
         "duration": 181,
         "year": 2019
     },
@@ -79,7 +79,7 @@
             "Accion",
             "Aventura"
         ],
-        "rating": 4.6,
+        "rating": 3.5,
         "duration": 132,
         "year": 2021
     },
@@ -93,7 +93,7 @@
             "Accion",
             "Espionaje"
         ],
-        "rating": 4.3,
+        "rating": 4.5,
         "duration": 163,
         "year": 2021
     },
@@ -107,7 +107,7 @@
             "Animacion",
             "Aventura"
         ],
-        "rating": 4.8,
+        "rating": 4.0,
         "duration": 100,
         "year": 2020
     },
@@ -121,7 +121,7 @@
             "Accion",
             "Comedia"
         ],
-        "rating": 4.2,
+        "rating": 2.0,
         "duration": 132,
         "year": 2021
     },
@@ -135,7 +135,7 @@
             "Terror",
             "Suspenso"
         ],
-        "rating": 4.3,
+        "rating": 4.0,
         "duration": 97,
         "year": 2020
     },
@@ -163,7 +163,7 @@
             "Accion",
             "Comedia"
         ],
-        "rating": 4.2,
+        "rating": 2.5,
         "duration": 115,
         "year": 2021
     },
@@ -177,7 +177,7 @@
             "Ciencia ficcion",
             "Accion"
         ],
-        "rating": 3.9,
+        "rating": 3.0,
         "duration": 157,
         "year": 2021
     },
