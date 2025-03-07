@@ -3,7 +3,7 @@ const Movie = require("../models/Movie.model");
 
 const movieRouter = express.Router();
 
-// Ruta para obtener todas las películas
+// GET all Movies: /api/movies
 movieRouter.get("/", (req, res, next) => {
   Movie.find()
     .then((movies) => {
@@ -14,22 +14,8 @@ movieRouter.get("/", (req, res, next) => {
     });
 });
 
-// Ruta para obtener una película por ID
-movieRouter.get("/:id", (req, res, next) => {
-  const movieId = req.params.id;
 
-  Movie.findById(movieId)
-    .then((movie) => {
-      if (!movie) {
-        return res.status(404).json({ message: "Movie not found" });
-      }
-      res.status(200).json(movie);
-    })
-    .catch((err) => {
-      res.status(500).json({ message: "Internal server error" });
-    });
-});
-
+// CREATE Movie: /api/movies
 movieRouter.post("/", (req, res) => {
   Movie.create({
     title: req.body.title,
@@ -52,6 +38,25 @@ movieRouter.post("/", (req, res) => {
     });
 });
 
+
+// GET Movie by ID: /api/movies/id
+movieRouter.get("/:id", (req, res, next) => {
+  const movieId = req.params.id;
+
+  Movie.findById(movieId)
+    .then((movie) => {
+      if (!movie) {
+        return res.status(404).json({ message: "Movie not found" });
+      }
+      res.status(200).json(movie);
+    })
+    .catch((err) => {
+      res.status(500).json({ message: "Internal server error" });
+    });
+});
+
+
+// UPDATE Movie by ID: /api/movies/id
 movieRouter.put("/:movieId", (req, res) => {
   const movieId = req.params.movieId;
 
@@ -67,7 +72,8 @@ movieRouter.put("/:movieId", (req, res) => {
     });
 });
 
-//DELETE STUDENT BY ID
+
+// DELETE Movie by ID: /api/movies/id
 movieRouter.delete("/:movieId", (req, res) => {
   const movieId = req.params.movieId;
 

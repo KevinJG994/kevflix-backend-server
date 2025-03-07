@@ -3,7 +3,7 @@ const Serie = require("../models/Serie.model");
 
 const serieRouter = express.Router();
 
-// Ruta para obtener todas las películas
+// GET all Series: /api/series
 serieRouter.get("/", (req, res, next) => {
   Serie.find()
     .then((series) => {
@@ -14,22 +14,8 @@ serieRouter.get("/", (req, res, next) => {
     });
 });
 
-// Ruta para obtener una película por ID
-serieRouter.get("/:serieId", (req, res, next) => {
-  const serieId = req.params.serieId;
 
-  Serie.findById(serieId)
-    .then((serie) => {
-      if (!serie) {
-        return res.status(404).json({ message: "Serie not found" });
-      }
-      res.status(200).json(serie);
-    })
-    .catch((err) => {
-      res.status(500).json({ message: "Internal server error" });
-    });
-});
-
+// CREATE Serie: /api/series
 serieRouter.post("/", (req, res) => {
   Serie.create({
     title: req.body.title,
@@ -53,6 +39,25 @@ serieRouter.post("/", (req, res) => {
     });
 });
 
+
+// GET Serie by ID: /api/series/:serieId
+serieRouter.get("/:serieId", (req, res, next) => {
+  const serieId = req.params.serieId;
+
+  Serie.findById(serieId)
+    .then((serie) => {
+      if (!serie) {
+        return res.status(404).json({ message: "Serie not found" });
+      }
+      res.status(200).json(serie);
+    })
+    .catch((err) => {
+      res.status(500).json({ message: "Internal server error" });
+    });
+});
+
+
+// UPDATE Serie by ID: /api/series/:serieId
 serieRouter.put("/:serieId", (req, res) => {
   const serieId = req.params.serieId;
 
@@ -68,7 +73,8 @@ serieRouter.put("/:serieId", (req, res) => {
     });
 });
 
-//DELETE STUDENT BY ID
+
+// DELETE Serie by ID: /api/series/:serieId
 serieRouter.delete("/:serieId", (req, res) => {
   const serieId = req.params.serieId;
 
