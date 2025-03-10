@@ -27,6 +27,7 @@ movieRouter.post("/", (req, res) => {
     rating: req.body.rating,
     duration: req.body.duration,
     year: req.body.year,
+    producer: req.body.producer,
   })
     .then((createMovie) => {
       console.log("Movie created ", createMovie);

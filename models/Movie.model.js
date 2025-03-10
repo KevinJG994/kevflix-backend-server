@@ -40,6 +40,10 @@ const movieSchema = new Schema({
     type: Number,
     required: true,
   },
+  producer: {
+    type: String,
+    required: true,
+  }
 });
 
 // Crear el modelo de la película
