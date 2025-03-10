@@ -22,7 +22,7 @@ const movieSchema = new Schema({
     required: true,
   },
   gender: {
-    type: [String],
+    enum: ['Terror', 'Animación', 'Acción', 'Comedia', 'Thriller', 'Ciencia Ficción', 'Fantasía', 'Drama'],
     required: true,
   },
   rating: {
