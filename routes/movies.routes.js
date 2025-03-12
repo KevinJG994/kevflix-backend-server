@@ -117,4 +117,5 @@ movieRouter.post("/fileVideo", fileUploaderVideo.single("videoUrl"), (req, res, 
 
   res.json({ fileUrl: req.file.path });
 });
+
 module.exports = movieRouter;

@@ -1,5 +1,6 @@
 const express = require("express");
 const Serie = require("../models/Serie.model");
+const { fileUploaderImage, fileUploaderVideo } = require("../config/cloudinary.config");
 
 const serieRouter = express.Router();
 
@@ -21,8 +22,8 @@ serieRouter.post("/", (req, res) => {
     title: req.body.title,
     director: req.body.director,
     synopsis: req.body.synopsis,
-    image: req.body.image,
-    video: req.body.video,
+    imageUrl: req.body.imageUrl,
+    videoUrl: req.body.videoUrl,
     gender: req.body.gender,
     rating: req.body.rating,
     seasons: req.body.seasons,
@@ -90,6 +91,33 @@ serieRouter.delete("/:serieId", (req, res) => {
 
       res.status(500).json({ error: "Deleting serie failed" });
     });
+});
+
+// POST File image: /api/series/upload
+serieRouter.post("/upload", fileUploaderImage.single("imageUrl"), (req, res, next) => {
+  console.log("file is: ", req.file)
+ 
+  if (!req.file) {
+    next(new Error("No file uploaded!"));
+    return;
+  }
+  
+  // Get the URL of the uploaded file and send it as a response.
+  // 'fileUrl' can be any name, just make sure you remember to use the same when accessing it on the frontend
+  
+  res.json({ fileUrl: req.file.path });
+});
+ 
+
+// POST File video: /api/series/fileVideo
+serieRouter.post("/fileVideo", fileUploaderVideo.single("videoUrl"), (req, res, next) => {
+  console.log("Video file is: ", req.file);
+
+  if (!req.file) {
+    return next(new Error("No video uploaded!"));
+  }
+
+  res.json({ fileUrl: req.file.path });
 });
 
 module.exports = serieRouter;
