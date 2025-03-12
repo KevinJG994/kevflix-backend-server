@@ -13,13 +13,11 @@ const movieSchema = new Schema({
     type: String,
     required: true,
   },
-  image: {
+  imageUrl: {
     type: String,
-    required: true,
   },
-  video: {
+  videoUrl: {
     type: String,
-    required: true,
   },
   gender: {
     type: String,
