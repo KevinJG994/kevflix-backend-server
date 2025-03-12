@@ -19,7 +19,7 @@ const userSchema = new Schema(
     },
     image: {
       type: String,
-      default: "./assets/images/profile-img.jpg",
+      default: "https://s3.amazonaws.com/37assets/svn/765-default-avatar.png",
     },
     createdAt: {
       type: Date,
