@@ -1,13 +1,77 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
+const { MongoClient } = require("mongodb");
+require("dotenv").config();
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const mongoUri = process.env.MONGODB_URI;
+const dbName = "kevflix-api-data";
+
+async function obtenerInfoRelevante() {
+    const client = new MongoClient(mongoUri);
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+
+        console.log("Obteniendo toda la información de películas y series...");
+
+        // Recupera todas las películas
+        const moviesCollection = db.collection("movies");
+        const movies = await moviesCollection.find({}).toArray();
+
+        // Recupera todas las series
+        const seriesCollection = db.collection("series");
+        const series = await seriesCollection.find({}).toArray();
+
+        // Formatea la información obtenida
+        let info = "";
+
+        if (movies.length > 0) {
+            info += "Películas disponibles:\n";
+            info += movies
+                .map((movie) => `- Título: ${movie.title}\n Director: ${movie.director}\n  Sinopsis: ${movie.synopsis}\n  Género: ${movie.gender}\n  Año: ${movie.year}\n  Duración: ${movie.duration}\n Productora: ${movie.producer}\n  Valoración: ${movie.rating}`)
+                .join("\n");
+        }
+
+        if (series.length > 0) {
+            info += "\nSeries disponibles:\n";
+            info += series
+                .map((serie) => `- Título: ${serie.title}\n Director: ${serie.director}\n  Sinopsis: ${serie.synopsis}\n  Género: ${serie.gender}\n  Temporadas: ${serie.seasons}\n Episodios: ${serie.episodes}\n  Año: ${serie.year}/n Valoración: ${serie.rating}`)
+                .join("\n");
+        }
+
+        return info || "No hay información disponible en la base de datos.";
+    } catch (error) {
+        console.error("Error al obtener información de MongoDB:", error);
+        return "Hubo un error al obtener la información de la base de datos.";
+    } finally {
+        await client.close();
+    }
+}
 
 async function chatBot(prompt) {
     try {
+        // Obtén toda la información de la base de datos
+        const informacionExtra = await obtenerInfoRelevante();
+
+        if (!informacionExtra) {
+            return "Lo siento, no encontré información disponible en la base de datos.";
+        }
+
+        // Construye el prompt mejorado
+        const enhancedPrompt = `
+El usuario está preguntando: "${prompt}"
+
+Aquí hay toda la información disponible de nuestra base de datos:
+${informacionExtra}
+
+Por favor, utiliza esta información para responder la pregunta del usuario de manera precisa.
+`;
+
+        // Llama a la API de Gemini con el prompt mejorado
         const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
-        console.log("Enviando prompt a Gemini:", prompt);
-        const result = await model.generateContent(prompt);
+        console.log("Enviando prompt a Gemini:", enhancedPrompt);
+        const result = await model.generateContent(enhancedPrompt);
         console.log("Resultado de la API de Gemini:", result);
 
         // Validación de la respuesta
@@ -21,7 +85,7 @@ async function chatBot(prompt) {
         return response;
     } catch (error) {
         console.error("Error en el servicio de chatbot:", error);
-        throw new Error("Error al generar la respuesta del chatbot.");
+        return "Hubo un error al procesar tu solicitud.";
     }
 }
 
