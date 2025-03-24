@@ -59,13 +59,11 @@ async function chatBot(prompt) {
 
         // Construye el prompt mejorado
         const enhancedPrompt = `
-El usuario está preguntando: "${prompt}"
-
-Aquí hay toda la información disponible de nuestra base de datos:
-${informacionExtra}
-
-Por favor, utiliza esta información para responder la pregunta del usuario de manera precisa.
-`;
+                                El usuario está preguntando: "${prompt}"
+                                Aquí hay toda la información disponible de nuestra base de datos:
+                                ${informacionExtra}
+                                Por favor, utiliza esta información para responder la pregunta del usuario de manera precisa.
+                                `;
 
         // Llama a la API de Gemini con el prompt mejorado
         const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
