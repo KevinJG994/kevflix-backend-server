@@ -87,6 +87,42 @@ async function chatBot(prompt) {
     }
 }
 
+async function recomendarPorGenero(genero, limite) {
+    const client = new MongoClient(mongoUri);
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+
+        console.log("Buscando películas para el género:", genero);
+        const movies = await db.collection("movies").find({ gender: genero }).limit(limite).toArray();
+        console.log("Películas encontradas:", movies);
+
+        console.log("Buscando series para el género:", genero);
+        const series = await db.collection("series").find({ gender: genero }).limit(limite).toArray();
+        console.log("Series encontradas:", series);
+
+        return {
+            peliculas: movies.map((movie) => ({
+                title: movie.title,
+                gender: movie.gender,
+                year: movie.year,
+                imageUrl: movie.imageUrl,
+            })),
+            series: series.map((serie) => ({
+                title: serie.title,
+                gender: serie.gender,
+                seasons: serie.seasons,
+                imageUrl: serie.imageUrl,
+            })),
+        };
+    } catch (error) {
+        console.error("Error al obtener recomendaciones de MongoDB:", error);
+        return { peliculas: [], series: [] };
+    } finally {
+        await client.close();
+    }
+}
 module.exports = {
-    chatBot
+    chatBot,
+    recomendarPorGenero
 };

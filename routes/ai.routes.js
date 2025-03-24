@@ -1,5 +1,5 @@
 const express = require("express");
-const { chatBot } = require("../services/ai.services");
+const { chatBot, recomendarPorGenero} = require("../services/ai.services");
 
 const router = express.Router();
 
@@ -22,4 +22,21 @@ router.post("/chat", async (req, res) => {
     }
 });
 
+router.get("/recomendations", async (req, res) => {
+    try {
+        const generosDisponibles = ['Terror', 'Animación', 'Acción', 'Comedia', 'Thriller', 'Ciencia Ficción', 'Fantasía', 'Drama'];
+        const generoSeleccionado = generosDisponibles[Math.floor(Math.random() * generosDisponibles.length)];
+
+        console.log("Género seleccionado:", generoSeleccionado);
+
+        const recomendaciones = await recomendarPorGenero(generoSeleccionado, 5);
+
+        console.log("Recomendaciones obtenidas:", recomendaciones);
+
+        res.status(200).json({ genero: generoSeleccionado, recomendaciones });
+    } catch (error) {
+        console.error("Error al obtener recomendaciones:", error);
+        res.status(500).json({ error: "Hubo un error al obtener las recomendaciones." });
+    }
+});
 module.exports = router;
