@@ -109,6 +109,27 @@ async function recomendarPorGenero(genero, limite) {
         const series = await db.collection("series").find({ gender: genero }).limit(limite).toArray();
         console.log("Series encontradas:", series);
 
+        // Si no hay suficientes resultados en MongoDB, usa Gemini como respaldo
+        if (movies.length + series.length < limite) {
+            console.log("No hay suficientes resultados en MongoDB. Llamando a Gemini...");
+            const prompt = `
+                Por favor, genera una lista de ${limite} recomendaciones de películas o series que pertenezcan al género "${genero}".
+            `;
+            const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+            const result = await model.generateContent(prompt);
+
+            const candidates = result.response?.candidates;
+            if (candidates && candidates.length > 0) {
+                const recomendacionesGemini = JSON.parse(candidates[0].content); // Asegúrate de que Gemini devuelva un JSON válido
+                console.log("Recomendaciones de Gemini:", recomendacionesGemini);
+
+                return {
+                    peliculas: [...movies, ...recomendacionesGemini.peliculas].slice(0, limite),
+                    series: [...series, ...recomendacionesGemini.series].slice(0, limite),
+                };
+            }
+        }
+
         return {
             peliculas: movies.map((movie) => ({
                 title: movie.title,
@@ -124,12 +145,13 @@ async function recomendarPorGenero(genero, limite) {
             })),
         };
     } catch (error) {
-        console.error("Error al obtener recomendaciones de MongoDB:", error);
+        console.error("Error al obtener recomendaciones de MongoDB o Gemini:", error);
         return { peliculas: [], series: [] };
     } finally {
         await client.close();
     }
 }
+
 module.exports = {
     chatBot,
     recomendarPorGenero
