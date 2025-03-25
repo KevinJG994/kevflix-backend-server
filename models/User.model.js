@@ -1,4 +1,6 @@
-const { Schema, model } = require("mongoose");
+const mongoose = require("mongoose");  // Importar mongoose
+
+const { Schema, model } = mongoose; 
 
 const userSchema = new Schema(
   {
@@ -26,7 +28,19 @@ const userSchema = new Schema(
       default: Date.now,
       immutable: true,
     },
-
+    favouriteMovie: [
+      { 
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: "Movie" 
+      }
+    ],
+    favouriteSerie: 
+    [
+      { 
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: "Serie" 
+      }
+    ]
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
