@@ -132,12 +132,14 @@ async function recomendarPorGenero(genero, limite) {
 
         return {
             peliculas: movies.map((movie) => ({
+                _id: movie._id,
                 title: movie.title,
                 gender: movie.gender,
                 year: movie.year,
                 imageUrl: movie.imageUrl,
             })),
             series: series.map((serie) => ({
+                _id: serie._id,
                 title: serie.title,
                 gender: serie.gender,
                 seasons: serie.seasons,
