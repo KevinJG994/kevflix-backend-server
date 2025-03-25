@@ -83,6 +83,14 @@ async function chatBot(prompt) {
         return response;
     } catch (error) {
         console.error("Error en el servicio de chatbot:", error);
+
+        // Manejo específico para error 429 (Too Many Requests)
+        if (error.response && error.response.status === 429) {
+            console.log("❌ Límite de solicitudes alcanzado");
+            return "Has alcanzado el límite de solicitudes. Intenta de nuevo más tarde.";
+        }
+
+        // Manejo genérico de errores
         return "Hubo un error al procesar tu solicitud.";
     }
 }

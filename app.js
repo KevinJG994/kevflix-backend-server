@@ -8,6 +8,7 @@ require("./db");
 // Handles http requests (express is node js framework)
 // https://www.npmjs.com/package/express
 const express = require("express");
+const rateLimit = require ('express-rate-limit')
 
 const app = express();
 
@@ -17,8 +18,18 @@ app.use(express.json());
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
 require("./config")(app);
 
-// 👇 Start handling routes here
 
+// Middleware de limitación de solicitudes
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutos
+    max: 100,
+    message: "Demasiadas solicitudes, intenta más tarde."
+  });
+
+// Apply the rate limiting middleware to all requests at AI routes.
+app.use("/api/ai", limiter);
+
+// 👇 Start handling routes here
 const authRoutes = require("./routes/auth.routes");
 app.use("/auth", authRoutes);
 
