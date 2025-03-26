@@ -62,7 +62,9 @@ async function chatBot(prompt) {
                                 El usuario está preguntando: "${prompt}"
                                 Aquí hay toda la información disponible de nuestra base de datos:
                                 ${informacionExtra}
-                                Por favor, utiliza esta información para responder la pregunta del usuario de manera precisa.
+                                Por favor, utiliza esta información para responder la pregunta del usuario de manera precisa,
+                                además formatea la respuesta con salto de línea (\\n) para separar párrafos y listas,
+                                usa (-) para las listas en lugar de asteriscos (*)
                                 `;
 
         // Llama a la API de Gemini con el prompt mejorado
