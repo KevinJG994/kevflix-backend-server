@@ -54,6 +54,29 @@ Tecnologías utilizadas en este proyecto:
 
 </div>
 
+</br>
+
+## 🤖 Inteligencia Artificial con Gemini
+
+Este proyecto utiliza la API de Gemini a través de la biblioteca ``@google/generative-ai`` para potenciar las funcionalidades de chatbot y recomendaciones personalizadas según los favoritos del usuario.
+
+### Uso de Gemini en el Proyecto
+
+- __Chatbot Inteligente__: Se integra un chatbot basado en IA que puede responder preguntas, asistir en la navegación y proporcionar recomendaciones.
+
+- __Recomendaciones Personalizadas__: Utilizando los datos de favoritos del usuario, la IA genera sugerencias de contenido que puedan interesarle.
+
+- __Limitación de Peticiones__: Se usa el middleware ``express-rate-limit`` para restringir el número de solicitudes y evitar abusos del servicio.
+
+### Instalación y Configuración
+
+Para asegurarte de que la integración funcione correctamente, instala las dependencias necesarias:
+  ```
+   npm install @google/generative-ai
+
+   npm install express-rate-limit
+   ```
+
   ## 🚀 Demo
 
 🔗 Servidor desplegado: https://kevflix-backend-server.onrender.com
